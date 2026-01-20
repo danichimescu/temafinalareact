@@ -100,8 +100,9 @@ body {
 
 /*Toastify CSS Overrides */
 .Toastify {
-  position: fixed;
-  z-index: 9999;
+  height: 0;
+  width: 0;
+  background-color: var(--dark-gray);
 }
 section {
     min-height: calc(100vh - 200px);

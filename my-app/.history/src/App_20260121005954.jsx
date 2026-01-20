@@ -20,12 +20,14 @@ import './App.css';
 export function App() {
   return (
     <BrowserRouter>
-      <AuthContextProvider>
+     
         <Nav />
         <Routes>
           <Route path="/"
             element={
-              <Mainpage />
+              <ProtectedRoute>
+                <Mainpage />
+              </ProtectedRoute>
             }
           />
           <Route
@@ -41,6 +43,7 @@ export function App() {
           <Route path="register" element={<Register />} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
+        <AuthContextProvider>
 
         <ToastContainer />
       </AuthContextProvider>

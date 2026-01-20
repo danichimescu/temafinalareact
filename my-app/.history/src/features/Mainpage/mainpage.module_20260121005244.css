@@ -447,7 +447,7 @@ section h2 {
 }
 
 .team-image {
-    background-image: url('src/assets/images/team1.jpg');
+    background-image: url('srcassets/images/team1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

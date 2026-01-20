@@ -49,7 +49,7 @@ export function Mainpage() {
       <section id="home"  className={styles.home_class}>
         {/* video back */}
         <div className={styles['video-container-back']}>
-          <video id="myVideo" className={styles.myVideo} autoPlay muted loop>
+          <video id="myVideo" className={styles.home_class} autoPlay muted loop>
             <source src="src/assets/1008811463-preview.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

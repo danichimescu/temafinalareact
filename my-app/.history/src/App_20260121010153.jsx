@@ -25,7 +25,9 @@ export function App() {
         <Routes>
           <Route path="/"
             element={
-              <Mainpage />
+             
+                <Mainpage />
+              
             }
           />
           <Route

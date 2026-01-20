@@ -28,7 +28,7 @@
 html {
   color: var(--text-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 62.5%;
+ 
   scroll-behavior: smooth;
 }
 
@@ -100,8 +100,9 @@ body {
 
 /*Toastify CSS Overrides */
 .Toastify {
-  position: fixed;
-  z-index: 9999;
+  height: 0;
+  width: 0;
+  background-color: var(--dark-gray);
 }
 section {
     min-height: calc(100vh - 200px);

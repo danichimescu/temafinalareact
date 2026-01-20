@@ -35,9 +35,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box;*/
+  box-sizing: border-box;
 
-  font-size: 1.6rem; 
+  font-size: 1.6rem;
 }
 
 
@@ -98,11 +98,7 @@ body {
 }
 /* /added */
 
-/*Toastify CSS Overrides */
-.Toastify {
-  position: fixed;
-  z-index: 9999;
-}
+Toastify CSS Overrides */
 section {
     min-height: calc(100vh - 200px);
     width: 100%;
