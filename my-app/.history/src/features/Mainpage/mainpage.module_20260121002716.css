@@ -66,11 +66,11 @@ section h2 {
 #about { background-image: url('assets/section6.jpg'); }
 #login { background-image: url('assets/section7.jpg'); } */
 
-.services-section { background-image: url('src/assets/section2.jpg'); }
-.portfolio-section { background-image: url('src/assets/section3.jpg'); padding: 60px 20px; }
-.order-section { background-image: url('src/assets/section4.jpg'); }
-.contact-section { background-image: url('src/assets/section5.jpg'); }
-.about-section { background-image: url('src/assets/section6.jpg'); }
+.services-section { background-image: url('assets/section2.jpg'); }
+.portfolio-section { background-image: url('assets/section3.jpg'); padding: 60px 20px; }
+.order-section { background-image: url('assets/section4.jpg'); }
+.contact-section { background-image: url('assets/section5.jpg'); }
+.about-section { background-image: url('assets/section6.jpg'); }
 
 
 

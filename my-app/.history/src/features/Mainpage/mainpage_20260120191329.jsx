@@ -62,8 +62,7 @@ export function Mainpage() {
         </div>
       </section>
 
-      <section id="services" className={styles['services-section']} >
-        {/* style={{ backgroundImage: "url('src/assets/section2.jpg')" }}        */}
+      <section id="services">
         <div className={styles.services_content}>
           <h2>Our Services</h2>
           {/* insert services grid */}
@@ -92,7 +91,7 @@ export function Mainpage() {
         </div>
       </section>
 
-      <section id="portfolio" className={styles['portfolio-section']}>
+      <section id="portfolio">
         <div className={styles.portfolio_content}>
           <div className={styles['gallery-container']}>
             <div className={styles['gallery-header']}>
@@ -114,7 +113,7 @@ export function Mainpage() {
         </div>
       </section>
 
-      <section id="order" className={styles['order-section']}>
+      <section id="order">
         <div className={styles.content}>
           <h2>Make an Order</h2>
           <div className={styles['order-form']}>
@@ -171,7 +170,7 @@ export function Mainpage() {
         </div>
       </section>
 
-      <section id="contact" className={styles['contact-section']}>
+      <section id="contact" className={styles['about-section']}>
         <div className={styles.content}>
           <h1>Contact</h1>
           <div className={styles['contact-content']}>

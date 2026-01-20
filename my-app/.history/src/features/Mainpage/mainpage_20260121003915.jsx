@@ -63,9 +63,10 @@ export function Mainpage() {
       </section>
 
       <section id="services" className={styles['services-section']} >
-        {/* style={{ backgroundImage: "url('src/assets/section2.jpg')" }}        */}
+
+{/* style={{ backgroundImage: "url('src/assets/section2.jpg')" }}        */}
         <div className={styles.services_content}>
-          <h2>Our Services</h2>
+          <h2>Our Servicessssss</h2>
           {/* insert services grid */}
           <div className={styles['services-grid']}>
             <div className={styles.service}>

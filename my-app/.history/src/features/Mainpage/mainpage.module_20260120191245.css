@@ -1,4 +1,23 @@
+:root {
+    --orange: #FF6B00;
+    --dark-orange: #E55D00;
+    --light-gray: #f4f4f4;
+    --dark-gray: #333;
+    --white: #ffffff;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 nav {
     position: fixed;
@@ -42,52 +61,23 @@ nav {
 .nav-lista a:hover {
     color: #ff8c00;
 }
-/* End of Navigation Styles */
+
+/* section */
+section {
+    min-height: calc(100vh - 200px);
+    width: 100%;
+}
 
 .content {
     position: relative;
     z-index: 1;
-    max-width: var(--content-max-width);
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Section Titles */
-section h1,
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-/* Section Background Images */
-/* #services { background-image: url('assets/section2.jpg'); }
-#portfolio { background-image: url('assets/section3.jpg'); padding: 60px 20px; }
-#order { background-image: url('assets/section4.jpg'); }
-#contact { background-image: url('assets/section5.jpg'); }
-#about { background-image: url('assets/section6.jpg'); }
-#login { background-image: url('assets/section7.jpg'); } */
-
-.services-section { background-image: url('src/assets/section2.jpg'); }
-.portfolio-section { background-image: url('src/assets/section3.jpg'); padding: 60px 20px; }
-.order-section { background-image: url('src/assets/section4.jpg'); }
-.contact-section { background-image: url('src/assets/section5.jpg'); }
-.about-section { background-image: url('src/assets/section6.jpg'); }
-
-
-
-/* ========================================
-   Home Section (with video)
-   ======================================== */
-#home {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 2rem;
-}
-
+/* video background */
 .video-container-back {
+
     position: absolute;
     top: 0;
     left: 0;
@@ -118,15 +108,29 @@ section h2 {
     background: rgba(0, 0, 0, 0.356);
 }
 
+/* text section */
+#home,
+#services {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
 .home_content {
     position: relative;
     z-index: 200;
     max-width: 600px;
-    color: var(--white);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     animation: fadeInUp 1s ease;
+
 }
 
 .home_content h1 {
@@ -144,26 +148,73 @@ section h2 {
     opacity: 0.95;
 }
 
-/* ========================================
-   Services Section
-   ======================================== */
-#services {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.services {
+    background-image: url('src/assets/section2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
 }
 
+.portfolio {
+    background-image: url('src/assets/section3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.order {
+    background-image: url('src/assets/section4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.contact {
+    background-image: url('src/assets/section5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#about {
+    background-image: url('src/assets/section6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+
 .services_content {
+
     margin-bottom: 1px;
 }
 
+#services h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* --- 5 coloane --- */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
-    max-width: var(--content-max-width);
+    max-width: 1200px;
     margin: 0 auto;
     text-align: left;
     animation: fadeInUp 1s ease;
@@ -178,6 +229,7 @@ section h2 {
     transition: transform 0.8s;
 }
 
+/* --- sectiunea servicii --- */
 .service h3 {
     margin-bottom: 10px;
     font-size: 1.2rem;
@@ -189,9 +241,6 @@ section h2 {
     line-height: 1.5;
 }
 
-/* ========================================
-   Portfolio / Gallery Section
-   ======================================== */
 .portfolio_content {
     min-height: 80vh;
     display: flex;
@@ -201,6 +250,7 @@ section h2 {
 }
 
 .gallery-container {
+
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     max-width: 900px;
@@ -209,6 +259,8 @@ section h2 {
 }
 
 .gallery-header {
+
+
     padding: 20px;
     text-align: center;
 }
@@ -225,6 +277,7 @@ section h2 {
 
 .image-display {
     position: relative;
+
     height: 400px;
     display: flex;
     justify-content: center;
@@ -249,16 +302,18 @@ section h2 {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+
 }
 
 .nav-button {
     background: linear-gradient(135deg, #eac066 0%, #e9b3aa 100%);
+
     border: none;
     padding: 12px 30px;
     font-size: 1em;
     border-radius: 25px;
     cursor: pointer;
-    transition: all var(--transition-speed) ease;
+    transition: all 0.3s ease;
     font-weight: bold;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
@@ -283,6 +338,7 @@ section h2 {
     gap: 10px;
     padding: 10px;
     overflow-x: auto;
+
     border-top: 1px solid #eee;
 }
 
@@ -293,7 +349,7 @@ section h2 {
     overflow: hidden;
     cursor: pointer;
     border: 3px solid transparent;
-    transition: all var(--transition-speed) ease;
+    transition: all 0.3s ease;
 }
 
 .thumbnail:hover {
@@ -317,19 +373,22 @@ section h2 {
     padding: 20px;
 }
 
+/* Keyboard shortcuts hint */
 .shortcuts {
     text-align: center;
     padding: 10px;
     font-size: 0.85em;
-    color: var(--white);
+    color: #ffffff;
+
+
 }
 
-/* ========================================
-   Order Section
-   ======================================== */
+/* sectiunea order */
 #order h2 {
+    text-align: center;
     font-size: 42px;
     color: wheat;
+    margin-bottom: 40px;
 }
 
 .order-form {
@@ -337,7 +396,7 @@ section h2 {
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.588);
     padding: 40px;
-    border-radius: var(--border-radius);
+    border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -359,7 +418,7 @@ section h2 {
     border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-    transition: border-color var(--transition-speed);
+    transition: border-color 0.3s;
 }
 
 .form-group select:focus,
@@ -370,7 +429,7 @@ section h2 {
 
 .price-result {
     background: var(--orange);
-    color: var(--white);
+    color: white;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
@@ -389,37 +448,36 @@ section h2 {
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
-    transition: background var(--transition-speed);
+    transition: background 0.3s;
 }
 
 .calculate-btn:hover {
     background: var(--dark-orange);
 }
 
-/* ========================================
-   Two-Column Layout (Contact & About)
-   ======================================== */
-.contact-content,
-.about-content {
+.hidden {
+    display: none;
+}
+
+/* sectiunea contact */
+#contact h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--orange);
+    margin-bottom: 40px;
+}
+
+.contact-content {
     margin-top: 100px;
     display: flex;
     gap: 40px;
 }
 
-/* Contact Info & About Text - Left Column */
-.contact-info,
-.about-text {
-    flex: 1;
-    padding: 30px;
-    border-radius: var(--border-radius);
-}
-
 .contact-info {
+    flex: 1;
     background: rgba(194, 193, 193, 0.749);
-}
-
-.about-text {
-    background-color: antiquewhite;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .contact-info h3 {
@@ -433,43 +491,19 @@ section h2 {
     color: rgb(0, 0, 0);
 }
 
-.about-text p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--dark-gray);
-    margin-bottom: 20px;
-}
-
-/* Contact Form & Team Image - Right Column */
-.contact-form,
-.team-image {
-    flex: 1;
-    border-radius: var(--border-radius);
-}
-
-.contact-form {
-    background: rgba(116, 116, 116, 0.749);
-    padding: 30px;
-}
-
-.team-image {
-    background-image: url('assets/images/team1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 2rem;
-}
-
 .map-container {
     width: 100%;
     height: 300px;
-    border-radius: var(--border-radius);
+    border-radius: 10px;
     overflow: hidden;
     margin-top: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    background: rgba(116, 116, 116, 0.749);
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .contact-form input,
@@ -503,30 +537,71 @@ section h2 {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background var(--transition-speed);
+    transition: background 0.3s;
 }
 
 .submit-btn:hover {
     background: var(--dark-orange);
 }
 
-/* ========================================
-   Utility Classes
-   ======================================== */
-.hidden {
-    display: none;
+/* sectiunea about */
+.about-content {
+    margin-top: 100px;
+    display: flex;
+    gap: 40px;
 }
 
-/* ========================================
-   Animations
-   ======================================== */
+.team-image {
+    flex: 1;
+    background-image: url('assets/images/team1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.about-text {
+    flex: 1;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+/* --- aici e responsive  --- */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
+
         translate: 0px -20px;
     }
+
     to {
         opacity: 1;
+
         translate: 0px 0px;
     }
 }
@@ -536,64 +611,28 @@ section h2 {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* ========================================
-   Responsive Design
-   ======================================== */
-@media (max-width: 900px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-content,
-    .about-content {
-        flex-direction: column;
-    }
-
-    .team-image {
-        min-height: 300px;
-    }
-}
-
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .home_content h1 {
+    .hero h1 {
         font-size: 2.5rem;
     }
 
-    .home_content p {
+    .hero p {
         font-size: 1.1rem;
     }
 
-    .nav-lista {
+    .nav-links {
         gap: 1rem;
     }
 
-    .nav-lista a {
+    .nav-links a {
         font-size: 0.9rem;
     }
-
-    section h1,
-    section h2 {
-        font-size: 2rem;
-    }
 }
-
-@media (max-width: 600px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-lista {
-        gap: 0.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-/* ========================================
-   End of File
-   ======================================== */
