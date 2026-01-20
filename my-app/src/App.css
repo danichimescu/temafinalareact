@@ -24,6 +24,12 @@ body {
 
   font-size: 1.6rem;
 }
+/* addding */
+section {
+    min-height: calc(100vh - 200px);
+    width: 100%;
+}
+
 
 :link {
   color: var(--primary-color);

@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import { BrandNavLink } from './BrandNavLink';
 import { useAuthContext } from '../../features/Auth/AuthContext';
+import { HashLink } from 'react-router-hash-link';
 
 import styles from './Nav.module.css';
 
@@ -19,20 +20,33 @@ export function Nav() {
 
       <menu className={styles.mainMenu}>
         <li>
-          <BrandNavLink to="/">Home</BrandNavLink>
+          { //<BrandNavLink to="/">Home</BrandNavLink>
+          }
+          <HashLink to="/#home" smooth className={styles.navLink}>
+            Home
+          </HashLink>
         </li>
         <li>
-          <BrandNavLink to="/">Services</BrandNavLink>
+          <HashLink to="/#services" smooth className={styles.navLink}>
+            Services
+          </HashLink>
         </li>
         <li>
-          <BrandNavLink to="/">Portofolio</BrandNavLink>
+          <HashLink to="/#portfolio" smooth className={styles.navLink}>
+            Portfolio
+          </HashLink>
         </li>
         <li>
-          <BrandNavLink to="/">About</BrandNavLink>
+          <HashLink to="/#about" smooth className={styles.navLink}>
+            About
+          </HashLink>
         </li>
         <li>
-          <BrandNavLink to="/">Contact</BrandNavLink>
+          <HashLink to="/#contact" smooth className={styles.navLink}>
+            Contact
+          </HashLink>
         </li>
+
         <li>
           <BrandNavLink to="/comanda">Make an order</BrandNavLink>
         </li>
@@ -50,7 +64,7 @@ export function Nav() {
         )}
 
         {user && (
-          <li className={styles.pushRight}> 
+          <li className={styles.pushRight}>
             Welcome, {user.firstName}!
             <a href="/" onClick={(e) => {
               e.preventDefault();
