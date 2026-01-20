@@ -25,16 +25,13 @@ export function Nav() {
           <BrandNavLink to="/">Services</BrandNavLink>
         </li>
         <li>
-          <BrandNavLink to="/">Portofolio</BrandNavLink>
+          <BrandNavLink to="/boardgames">Portofolio</BrandNavLink>
         </li>
         <li>
-          <BrandNavLink to="/">About</BrandNavLink>
+          <BrandNavLink to="/boardgames">Boardgames</BrandNavLink>
         </li>
         <li>
-          <BrandNavLink to="/">Contact</BrandNavLink>
-        </li>
-        <li>
-          <BrandNavLink to="/comanda">Make an order</BrandNavLink>
+          <BrandNavLink to="/comanda">Comanda</BrandNavLink>
         </li>
 
 

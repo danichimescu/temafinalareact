@@ -27,8 +27,8 @@ export function Nav() {
         <li>
           <BrandNavLink to="/">Portofolio</BrandNavLink>
         </li>
-        <li>
-          <BrandNavLink to="/">About</BrandNavLink>
+                <li>
+          <BrandNavLink to="/">Portofolio</BrandNavLink>
         </li>
         <li>
           <BrandNavLink to="/">Contact</BrandNavLink>

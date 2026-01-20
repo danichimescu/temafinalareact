@@ -11,9 +11,9 @@ export function Nav() {
     <nav className={styles.nav} aria-label="main menu">
       <Link to="/">
         <img
-          src="src/assets/logoSovis.png" //"../../assets/logoSovis.png"
-          alt="Sovis Print logo"
-          height="40"
+          src="https://scoalainformala.ro/wp-content/uploads/2021/07/Logo-scoala-informala-de-it-alb.png"
+          alt="Scoala informala logo"
+          height="60"
         />
       </Link>
 
@@ -21,20 +21,11 @@ export function Nav() {
         <li>
           <BrandNavLink to="/">Home</BrandNavLink>
         </li>
-        <li>
-          <BrandNavLink to="/">Services</BrandNavLink>
+                <li>
+          <BrandNavLink to="/boardgames">Boardgames</BrandNavLink>
         </li>
         <li>
-          <BrandNavLink to="/">Portofolio</BrandNavLink>
-        </li>
-        <li>
-          <BrandNavLink to="/">About</BrandNavLink>
-        </li>
-        <li>
-          <BrandNavLink to="/">Contact</BrandNavLink>
-        </li>
-        <li>
-          <BrandNavLink to="/comanda">Make an order</BrandNavLink>
+          <BrandNavLink to="/comanda">Comanda</BrandNavLink>
         </li>
 
 

@@ -38,7 +38,24 @@ export function App() {
               </ProtectedRoute>
             }
           />
-          
+          <Route path="boardgames" element={<BoardgameList />} />
+          <Route
+            path="boardgames/add"
+            element={
+              <ProtectedRoute>
+                <BoardgameAdd />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="boardgames/:id/edit"
+            element={
+              <ProtectedRoute>
+                <BoardgameEdit />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="boardgames/:id/details" element={<BoardgameDetails />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="*" element={<h1>404 Not Found</h1>} />

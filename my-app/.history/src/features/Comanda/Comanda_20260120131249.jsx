@@ -5,9 +5,9 @@ import { processServerResponse } from '../../utils';
 import styles from './Comanda.module.css';
 
 const apiUrl = import.meta.env.VITE_API_URL;
-const endpoint = `${apiUrl}/comanda`;
+const endpoint = `${apiUrl}/todos`;
 
-export function Comanda() {
+export function TodoList() {
   const [todos, setTodos] = useState(null);
   const { accessToken, user } = useAuthContext();
 

@@ -28,13 +28,10 @@ export function Nav() {
           <BrandNavLink to="/">Portofolio</BrandNavLink>
         </li>
         <li>
-          <BrandNavLink to="/">About</BrandNavLink>
+          <BrandNavLink to="/">Boardgames</BrandNavLink>
         </li>
         <li>
-          <BrandNavLink to="/">Contact</BrandNavLink>
-        </li>
-        <li>
-          <BrandNavLink to="/comanda">Make an order</BrandNavLink>
+          <BrandNavLink to="/comanda">Comanda</BrandNavLink>
         </li>
 
 

@@ -11,9 +11,9 @@ export function Nav() {
     <nav className={styles.nav} aria-label="main menu">
       <Link to="/">
         <img
-          src="src/assets/logoSovis.png" //"../../assets/logoSovis.png"
+          src=".."
           alt="Sovis Print logo"
-          height="40"
+          height="60"
         />
       </Link>
 
@@ -22,19 +22,16 @@ export function Nav() {
           <BrandNavLink to="/">Home</BrandNavLink>
         </li>
         <li>
-          <BrandNavLink to="/">Services</BrandNavLink>
+          <BrandNavLink to="/boardgames">Boardgames</BrandNavLink>
         </li>
         <li>
-          <BrandNavLink to="/">Portofolio</BrandNavLink>
+          <BrandNavLink to="/boardgames">Boardgames</BrandNavLink>
         </li>
         <li>
-          <BrandNavLink to="/">About</BrandNavLink>
+          <BrandNavLink to="/boardgames">Boardgames</BrandNavLink>
         </li>
         <li>
-          <BrandNavLink to="/">Contact</BrandNavLink>
-        </li>
-        <li>
-          <BrandNavLink to="/comanda">Make an order</BrandNavLink>
+          <BrandNavLink to="/comanda">Comanda</BrandNavLink>
         </li>
 
 
