@@ -18,9 +18,9 @@
   --dark-gray: #333;
   --white: #ffffff;
   /* --section-padding: 100px 20px; */
-    --section-padding: 100px 0px;
+    --section-padding: 0px;
   --content-max-width: 1200px;
-  --border-radius: 0px;
+  --border-radius: 10px;
   --transition-speed: 0.3s;
 
 

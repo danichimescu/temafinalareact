@@ -1,0 +1,6 @@
+{
+  "/users*": "/600/users$1",
+  "/todos*": "/600/todos$1",
+  "/comanda*": "/664/boardgames$1"
+}
+
