@@ -51,6 +51,17 @@
   }
 }
 
+.navLink {
+  display: inline-block;
+  padding: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
 .pushRight {
   margin-left: auto;
 }

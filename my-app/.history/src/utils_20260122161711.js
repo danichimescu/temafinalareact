@@ -30,7 +30,7 @@ export async function processServerResponse(res) {
       toast.error(ret);
     }
     console.log('aHTTP request error status:', res.status, 'message:', ret);
-    throw new Error('bHTTP request error!');
+    throw new Error('HTTP request error!');
   }
   // return ret;
   return ret ?? [];

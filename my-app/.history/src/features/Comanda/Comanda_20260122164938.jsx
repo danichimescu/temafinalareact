@@ -6,7 +6,6 @@ import styles from './Comanda.module.css';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 const endpoint = `${apiUrl}/comanda`;
-// const endpoint = `${apiUrl}/todos`;
 ///
 
 
@@ -55,6 +54,30 @@ export function Comanda() {
   }, [authHeader, user?.id]);
 
 
+  // if(!todos) {
+  //   return <strong>Loading ...</strong>;
+  // }
+
+  // let toDisplay = [];
+  // if (Array.isArray(todos)) {
+  //   //   for(const todo of todos) {
+  //   //     toDisplay.push(
+  //   //       <li key={todo.id}>
+  //   //         <label>
+  //   //           <input type="checkbox" /> {todo.title}
+  //   //         </label>
+  //   //       </li>
+  //   //     );
+  //   //   }
+
+  //   toDisplay = todos.map((todo) => (
+  //     <li key={todo.id}>
+  //       <label>
+  //         <input type="checkbox" /> {todo.title}
+  //       </label>
+  //     </li>
+  //   ));
+  // }
 
   // CREATE
   async function handleSubmit(e) {
@@ -124,7 +147,7 @@ export function Comanda() {
         <input type="text" id="title" name="title" />
         <button type="submit">Add</button>
       </form>
-      {/* {console.log("todos inside of return before loading " + todos.title)} */}
+      {console.log("todos inside of return before loading " + todos.title)}
       {!todos && <strong>Loading ...</strong>}
       {todos?.length > 0 && (
         <ul>

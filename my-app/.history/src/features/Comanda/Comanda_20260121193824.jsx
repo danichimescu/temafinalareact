@@ -6,7 +6,6 @@ import styles from './Comanda.module.css';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 const endpoint = `${apiUrl}/comanda`;
-// const endpoint = `${apiUrl}/todos`;
 ///
 
 
@@ -22,39 +21,38 @@ export function Comanda() {
 
   // READ/RETRIEVE
   useEffect(() => {
-    // console.log("inside useEffect before fetch user.id: "+user?.id);
-    // console.log("inside useEffect before fetch tot: "+`${endpoint}?userId=${user?.id}`);
-    //http://localhost:3000/comanda?userId=2
-
-    // Don't fetch if user is not loaded yet
-    if (!user?.id) {
-      return;
-    }
-
-    //   fetch(`${endpoint}?userId=${user?.id}`, {
-    //     headers: authHeader,
-    //   })
-    //     .then(processServerResponse)
-    //     .then((data) => setTodos(data))
-    //     .catch(console.warn);
-    // }, [authHeader, user?.id]);
-
-
-    fetch(`${endpoint}?userId=${user.id}`, {
+    fetch(`${endpoint}?userId=${user?.id}`, {
       headers: authHeader,
     })
       .then(processServerResponse)
-      // .then((data) => setTodos(data))
-      .then((data) => setTodos(Array.isArray(data) ? data : []))
-      .catch((error) => {
-        console.error('Failed to fetch todos:', error);
-        // toast.error('Could not load your todos or no todos yet. Please try again.');
-        setTodos([]);  // Set empty array so UI doesn't stay on "Loading..."
-      });
-    // .catch(console.warn);
+      .then((data) => setTodos(data))
+      .catch(console.warn);
   }, [authHeader, user?.id]);
 
+  // if(!todos) {
+  //   return <strong>Loading ...</strong>;
+  // }
 
+  // let toDisplay = [];
+  // if (Array.isArray(todos)) {
+  //   //   for(const todo of todos) {
+  //   //     toDisplay.push(
+  //   //       <li key={todo.id}>
+  //   //         <label>
+  //   //           <input type="checkbox" /> {todo.title}
+  //   //         </label>
+  //   //       </li>
+  //   //     );
+  //   //   }
+
+  //   toDisplay = todos.map((todo) => (
+  //     <li key={todo.id}>
+  //       <label>
+  //         <input type="checkbox" /> {todo.title}
+  //       </label>
+  //     </li>
+  //   ));
+  // }
 
   // CREATE
   async function handleSubmit(e) {
@@ -118,15 +116,15 @@ export function Comanda() {
 
   return (
     <>
-      <h1>Order</h1>
+      <h1>Todos</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">What do you want to order?</label>{' '}
         <input type="text" id="title" name="title" />
         <button type="submit">Add</button>
       </form>
-      {/* {console.log("todos inside of return before loading " + todos.title)} */}
+      cons
       {!todos && <strong>Loading ...</strong>}
-      {todos?.length > 0 && (
+      {todos && (
         <ul>
           {todos.map((todo) => (
             <li key={todo.id}>
@@ -149,7 +147,6 @@ export function Comanda() {
           ))}
         </ul>
       )}
-      {todos?.length === 0 && <p>No todos yet. Add one above!</p>}
     </>
   );
 }

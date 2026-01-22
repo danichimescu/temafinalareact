@@ -29,6 +29,7 @@
       "id": 2
     }
   ],
+ 
   "comanda": [
     {
       "title": "Comanda Buy Milk",
@@ -37,7 +38,7 @@
       "id": 1
     },
     {
-      "title": "fsdfa",
+      "title": "comanda ceva pritnuri",
       "completed": false,
       "userId": 2,
       "id": 2

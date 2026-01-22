@@ -17,30 +17,17 @@
   ],
   "todos": [
     {
+      "userId": 2,
+      "title": "Learn React",
+      "completed": true,
+      "id": 1
+    },
+    {
       "title": "Buy Milk",
       "completed": false,
       "userId": 1,
       "id": 1
-    },
-    {
-      "title": "gsdgas",
-      "completed": false,
-      "userId": 2,
-      "id": 2
-    }
-  ],
-  "comanda": [
-    {
-      "title": "Comanda Buy Milk",
-      "completed": false,
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "title": "fsdfa",
-      "completed": false,
-      "userId": 2,
-      "id": 2
     }
   ]
+ 
 }

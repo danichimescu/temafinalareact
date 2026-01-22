@@ -8,29 +8,11 @@ export async function processServerResponse(res) {
       toast.error('Resource not found!');
     }
 
-    // if (res.status === 401 || res.status === 403) {
-    //   toast.error(ret);
-    // }
-    if (res.status === 401) {
-      toast.error(ret);
-    }
-    //The error might be happening because the API returns 403 for an empty result. 
-    // 403 might mean no todos exist for this user yet - not a real error
-    if (res.status === 403 && ret.includes && ret.includes('owner id')) {
-      // 1. ret.includes (without parentheses)
-      // This checks if ret has an includes method. It evaluates to:
-
-      // true if ret is a string (strings have .includes())
-      // false/undefined if ret is an object, number, null, etc.
-      console.log('No todos found for this user');
-      return [];
-    }
-
-    if (res.status === 403) {
+    if (res.status === 401 || res.status === 403) {
       toast.error(ret);
     }
     console.log('aHTTP request error status:', res.status, 'message:', ret);
-    throw new Error('bHTTP request error!');
+    throw new Error('HTTP request error!');
   }
   // return ret;
   return ret ?? [];

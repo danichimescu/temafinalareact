@@ -118,13 +118,13 @@ section {
 section h1,
 section h2 {
     font-size: 2.5rem;
+  
     margin-bottom: 40px;
 }
 
 h1 {
     font-size: 2.5rem;
-    margin-top: 60px;
-    /* padding-top: 55px; */
+    padding-top: 65px;
     margin-bottom: 40px;
 }
 

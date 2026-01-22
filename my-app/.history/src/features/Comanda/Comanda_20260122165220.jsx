@@ -6,7 +6,6 @@ import styles from './Comanda.module.css';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 const endpoint = `${apiUrl}/comanda`;
-// const endpoint = `${apiUrl}/todos`;
 ///
 
 
