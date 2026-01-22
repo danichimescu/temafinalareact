@@ -1,3 +1,177 @@
-.todo:has(input:checked) {
+.comandaContainer {
+  max-width: 800px;
+  margin: 100px auto 40px;
+  padding: 20px;
+}
+
+.comandaContainer h1 {
+  color: var(--orange, #ff8c00);
+  margin-bottom: 30px;
+}
+
+.comandaContainer h2 {
+  color: var(--orange, #ff8c00);
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Order Form */
+.order-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: var(--orange, #ff8c00);
+}
+
+.printingOptions {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.calculate-btn,
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: var(--orange, #ff8c00);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.calculate-btn:hover,
+.submit-btn:hover {
+  background: var(--dark-orange, #e67e00);
+}
+
+.calculate-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.price-result {
+  background: var(--orange, #ff8c00);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Orders List */
+.ordersList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.orderItem label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.orderItem input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.orderType {
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.orderDetails {
+  color: #666;
+  font-size: 14px;
+}
+
+.completed {
   text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.deleteBtn {
+  background: #ff4444;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.deleteBtn:hover {
+  background: #cc0000;
+}
+
+.send-email-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.send-email-btn:hover {
+  background: #45a049;
 }

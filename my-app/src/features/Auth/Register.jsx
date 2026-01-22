@@ -16,6 +16,7 @@ const registerSchema = object({
   retypePassword: string(),
   firstName: string().min(1, 'Please tell us your first name'),
   lastName: string().min(1, 'Please tell us your last name'),
+  phone: string().min(10, 'Please enter a valid phone number'),
 }).refine((data) => data.password === data.retypePassword, {
   message: 'The passwords did not match',
   path: ['retypePassword'],
@@ -28,6 +29,7 @@ export function Register() {
     retypePassword: '',
     firstName: '',
     lastName: '',
+    phone: '',
   });
 
   const [errors, setErrors] = useState(null);
@@ -161,6 +163,19 @@ export function Register() {
       />
       {errors?.lastName && (
         <p className="errorMessage secondColumn">{errors.lastName}</p>
+      )}
+
+      <label htmlFor="phone">Phone</label>
+      <input
+        name="phone"
+        id="phone"
+        type="tel"
+        value={formValues.phone}
+        onChange={handleInputChange}
+        placeholder="Phone Number"
+      />
+      {errors?.phone && (
+        <p className="errorMessage secondColumn">{errors.phone}</p>
       )}
 
       <button type="submit" className="secondColumn autoWidth">

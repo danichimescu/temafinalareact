@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "email": "a@a.com",
+      "password": "$2a$10$GTI/KzFus5Hl.he4M.Sv0OoGrcTwJ4HZY9z1FN9h4mf65HBzJEK2S",
+      "firstName": "Paul",
+      "lastName": "Negoescu",
+      "id": 1
+    },
+    {
+      "email": "constantindan@gmail.com",
+      "password": "$2a$10$eRXS2Io6JYoiMOs0HO3YWeViVtC8ssRyR8wATtWZvPzpbaeESb0T.",
+      "firstName": "ICHIMESCU",
+      "lastName": "Dan",
+      "id": 2
+    }
+  ],
+  "todos": [
+    {
+      "title": "Buy Milk",
+      "completed": false,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "gsdgas",
+      "completed": false,
+      "userId": 2,
+      "id": 2
+    }
+  ],
+  "comanda": [
+    {
+      "title": "Comanda Buy Milk",
+      "completed": false,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "serviceType": "printing",
+      "format": "A5",
+      "copies": 4,
+      "printType": "single",
+      "colorType": "color",
+      "price": 3,
+      "completed": false,
+      "createdAt": "2026-01-22T...",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "serviceType": "printing",
+      "format": "A5",
+      "copies": 1,
+      "printType": "single",
+      "colorType": "color",
+      "price": 0.75,
+      "completed": false,
+      "createdAt": "2026-01-22T16:00:20.492Z",
+      "userId": 2,
+      "id": 3
+    }
+  ]
+}

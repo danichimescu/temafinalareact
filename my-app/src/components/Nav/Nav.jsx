@@ -36,17 +36,22 @@ export function Nav() {
             Portfolio
           </HashLink>
         </li>
-        <li>
-          <HashLink to="/#about" smooth className={styles.navLink}>
-            About
-          </HashLink>
-        </li>
+
         <li>
           <HashLink to="/#contact" smooth className={styles.navLink}>
             Contact
           </HashLink>
         </li>
-
+        <li>
+          <HashLink to="/#sendamessage" smooth className={styles.navLink}>
+            Send a Message
+          </HashLink>
+        </li>
+        <li>
+          <HashLink to="/#about" smooth className={styles.navLink}>
+            About
+          </HashLink>
+        </li>
         <li>
           <BrandNavLink to="/comanda">Make an order</BrandNavLink>
         </li>

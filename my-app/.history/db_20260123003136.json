@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "email": "a@a.com",
+      "password": "$2a$10$GTI/KzFus5Hl.he4M.Sv0OoGrcTwJ4HZY9z1FN9h4mf65HBzJEK2S",
+      "firstName": "Paul",
+      "lastName": "Negoescu",
+      "id": 1
+    },
+    {
+      "email": "constantindan@gmail.com",
+      "password": "$2a$10$eRXS2Io6JYoiMOs0HO3YWeViVtC8ssRyR8wATtWZvPzpbaeESb0T.",
+      "firstName": "ICHIMESCU",
+      "lastName": "Dan",
+      "phone": "0731234567",
+      "id": 2
+    }
+  ],
+  "todos": [
+    {
+      "title": "Buy Milk",
+      "completed": false,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "gsdgas",
+      "completed": false,
+      "userId": 2,
+      "id": 2
+    }
+  ],
+  "comanda": [
+    {
+      "title": "Comanda Buy Milk",
+      "completed": false,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "serviceType": "printing",
+      "format": "A5",
+      "copies": 4,
+      "printType": "single",
+      "colorType": "color",
+      "price": 3,
+      "completed": true,
+      "createdAt": "2026-01-22T...",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "serviceType": "printing",
+      "format": "A5",
+      "copies": 1,
+      "printType": "single",
+      "colorType": "color",
+      "price": 0.75,
+      "completed": true,
+      "createdAt": "2026-01-22T16:00:20.492Z",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "serviceType": "3d-letters",
+      "format": null,
+      "copies": null,
+      "printType": null,
+      "colorType": null,
+      "price": 0,
+      "completed": true,
+      "createdAt": "2026-01-22T16:02:56.917Z",
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "serviceType": "stickers",
+      "format": null,
+      "copies": null,
+      "printType": null,
+      "colorType": null,
+      "price": 0,
+      "completed": true,
+      "createdAt": "2026-01-22T16:03:07.422Z",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "serviceType": "billboards",
+      "format": null,
+      "copies": null,
+      "printType": null,
+      "colorType": null,
+      "price": 0,
+      "completed": true,
+      "createdAt": "2026-01-22T16:03:15.673Z",
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "serviceType": "promotional",
+      "format": null,
+      "copies": null,
+      "printType": null,
+      "colorType": null,
+      "price": 0,
+      "completed": true,
+      "createdAt": "2026-01-22T16:03:24.107Z",
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "serviceType": "printing",
+      "format": "A5",
+      "copies": 25,
+      "printType": "double",
+      "colorType": "color",
+      "price": 33.75,
+      "completed": true,
+      "createdAt": "2026-01-22T16:03:39.440Z",
+      "userId": 2,
+      "id": 8
+    }
+  ]
+}
