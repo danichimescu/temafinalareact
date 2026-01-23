@@ -70,7 +70,6 @@ export function Nav() {
         )}
 
         {user && (
-           <>
           <li className={styles.pushRight}>
             Welcome, {user.firstName}!
             <a href="/" onClick={(e) => {
@@ -78,10 +77,9 @@ export function Nav() {
               logout();
             }}>Logout</a>
           </li>
-           <li>
+                      <li>
               <BrandNavLink to="/profile">Profile</BrandNavLink>
             </li>
-          </>
         )}
       </menu>
     </nav>
