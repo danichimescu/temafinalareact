@@ -2,8 +2,8 @@
   --brand-gray: #333;
   --text-color: var(--brand-gray);
   --text-on-dark-color: #fff;
-  --primary-color: #676767;
-  --primary-dark-color: color-mix(in srgb, var(--primary-color) 50%, #000);
+  --primary-color: #2b2928;
+  --primary-dark-color: color-mix(in srgb, var(--primary-color) 60%, #000);
   --primary-light-color: color-mix(in srgb, var(--primary-color) 50%, #fff);
   --secondary-color: #F2CB05;
 
