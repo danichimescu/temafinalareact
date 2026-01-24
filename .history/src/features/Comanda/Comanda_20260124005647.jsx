@@ -246,7 +246,7 @@ Thank you!`;
     navigate('/');
 
     // Scroll to sendamessage section after navigation
-    // React needs time to render the new page - 'sendamessage' nu exista cand  navigate('/'); este apelat
+    // React needs time to render the new page - 'sendamessage' nu exista cand  navigate('/');
     setTimeout(() => {
       const element = document.getElementById('sendamessage');
       if (element) {

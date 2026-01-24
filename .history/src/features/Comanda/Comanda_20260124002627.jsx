@@ -9,7 +9,7 @@ import styles from './Comanda.module.css';
 const apiUrl = import.meta.env.VITE_API_URL;
 const endpoint = `${apiUrl}/comanda`;
 
-//key object, like a dictionary, : define a proprety
+//key object, like a dictionary, : define a propre
 const formatPrices = {
   'A5': 0.5,
   'A4': 0.8,
@@ -21,9 +21,7 @@ const formatPrices = {
 };
 
 export function Comanda() {
-  // export function Comanda({ orders, setOrders }) {
   // Orders list state
-  // remove this for use props from App.jsx!
   const [orders, setOrders] = useState(null);
 
   // Order form state
@@ -110,7 +108,6 @@ export function Comanda() {
     const orderData = {
       serviceType: serviceType,
       format: serviceType === 'printing' ? printFormat : null,
-      //parseInt() can return NaN if the input is invalid - use || 1 to default to 1
       copies: serviceType === 'printing' ? parseInt(copies) || 1 : null,
       printType: serviceType === 'printing' ? printType : null,
       colorType: serviceType === 'printing' ? colorType : null,
@@ -129,8 +126,7 @@ export function Comanda() {
           ...authHeader
         },
       }).then(processServerResponse);
-  
-      //React state update 
+
       const newOrdersList = [...orders, newOrder];
       setOrders(newOrdersList);
 
@@ -235,8 +231,7 @@ TOTAL: ${totalPrice.toFixed(2)} RON
 Please contact me to confirm the order.
 
 Thank you!`;
-//Props vs localStorage
-// Props - passing data from parent to child //Scope	Parent → Child only
+
     // Save to localStorage for Mainpage to read
     localStorage.setItem('orderMessage', message);
     localStorage.setItem('orderName', user.firstName || '');
@@ -246,7 +241,6 @@ Thank you!`;
     navigate('/');
 
     // Scroll to sendamessage section after navigation
-    // React needs time to render the new page - 'sendamessage' nu exista cand  navigate('/'); este apelat
     setTimeout(() => {
       const element = document.getElementById('sendamessage');
       if (element) {

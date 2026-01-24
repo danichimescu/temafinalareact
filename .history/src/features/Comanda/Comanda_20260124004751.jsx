@@ -21,9 +21,7 @@ const formatPrices = {
 };
 
 export function Comanda() {
-  // export function Comanda({ orders, setOrders }) {
   // Orders list state
-  // remove this for use props from App.jsx!
   const [orders, setOrders] = useState(null);
 
   // Order form state
@@ -246,7 +244,6 @@ Thank you!`;
     navigate('/');
 
     // Scroll to sendamessage section after navigation
-    // React needs time to render the new page - 'sendamessage' nu exista cand  navigate('/'); este apelat
     setTimeout(() => {
       const element = document.getElementById('sendamessage');
       if (element) {

@@ -21,9 +21,7 @@ const formatPrices = {
 };
 
 export function Comanda() {
-  // export function Comanda({ orders, setOrders }) {
   // Orders list state
-  // remove this for use props from App.jsx!
   const [orders, setOrders] = useState(null);
 
   // Order form state
@@ -129,8 +127,7 @@ export function Comanda() {
           ...authHeader
         },
       }).then(processServerResponse);
-  
-      //React state update 
+//React state update 
       const newOrdersList = [...orders, newOrder];
       setOrders(newOrdersList);
 
@@ -235,8 +232,7 @@ TOTAL: ${totalPrice.toFixed(2)} RON
 Please contact me to confirm the order.
 
 Thank you!`;
-//Props vs localStorage
-// Props - passing data from parent to child //Scope	Parent → Child only
+
     // Save to localStorage for Mainpage to read
     localStorage.setItem('orderMessage', message);
     localStorage.setItem('orderName', user.firstName || '');
@@ -246,7 +242,6 @@ Thank you!`;
     navigate('/');
 
     // Scroll to sendamessage section after navigation
-    // React needs time to render the new page - 'sendamessage' nu exista cand  navigate('/'); este apelat
     setTimeout(() => {
       const element = document.getElementById('sendamessage');
       if (element) {

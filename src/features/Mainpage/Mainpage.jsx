@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './mainpage.module.css';
+import attachIcon from '../../assets/attach.png';
+import { Gallery } from './Gallery';
 
 // export function Mainpage() {
 // return (
@@ -14,12 +16,14 @@ export function Mainpage() {
   const [contactName, setContactName] = useState('');
   const [contactPhone, setContactPhone] = useState('');
   const [contactMessage, setContactMessage] = useState('');
+  const [attachedFiles, setAttachedFiles] = useState([]);
 
   // Check for order data from Comanda page
   useEffect(() => {
     const orderMessage = localStorage.getItem('orderMessage');
     const orderName = localStorage.getItem('orderName');
     const orderPhone = localStorage.getItem('orderPhone');
+    const orderAttachments = localStorage.getItem('orderAttachments');
 
     if (orderMessage) {
       setContactMessage(orderMessage);
@@ -32,6 +36,10 @@ export function Mainpage() {
     if (orderPhone) {
       setContactPhone(orderPhone);
       localStorage.removeItem('orderPhone');
+    }
+    if (orderAttachments) {
+      setAttachedFiles(JSON.parse(orderAttachments));
+      localStorage.removeItem('orderAttachments');
     }
   }, []);
 
@@ -90,23 +98,7 @@ export function Mainpage() {
 
       <section id="portfolio" className={styles['portfolio-section']}>
         <div className={styles.portfolio_content}>
-          <div className={styles['gallery-container']}>
-            <div className={styles['gallery-header']}>
-              <h1>Portfolio</h1>
-              <div className={styles['image-counter']} id="imageCounter">Loading...</div>
-            </div>
-            <div className={styles['image-display']} id="imageDisplay">
-              <div className={styles['loading-message']}>Loading images...</div>
-            </div>
-            <div className={styles.controls}>
-              <button className={styles['nav-button']} id="prevBtn" disabled>← Previous</button>
-              <button className={styles['nav-button']} id="nextBtn" disabled>Next →</button>
-            </div>
-            <div className={styles['thumbnail-strip']} id="thumbnailStrip"></div>
-            <div className={styles.shortcuts}>
-              Use ← → arrow keys to navigate | Click thumbnails to jump to image
-            </div>
-          </div>
+          <Gallery />
         </div>
       </section>
 
@@ -170,6 +162,22 @@ export function Mainpage() {
                   value={contactMessage}
                   onChange={(e) => setContactMessage(e.target.value)}
                 />
+
+                {/* Display attached files */}
+                {attachedFiles.length > 0 && (
+                  <div className={styles.attachmentsSection}>
+                    <h4>Attached Files:</h4>
+                    <ul className={styles.attachmentsList}>
+                      {attachedFiles.map((file, index) => (
+                        <li key={index} className={styles.attachmentItem}>
+                          <img src={attachIcon} alt="Attachment" className={styles.attachIconSmall} />
+                          <span>{file.name}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <button type="submit" className={styles['submit-btn']}>Send Message</button>
               </form>
             

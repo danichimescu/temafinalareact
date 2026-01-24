@@ -34,7 +34,6 @@ export function App() {
             path="comanda"
             element={
               <ProtectedRoute>
-                {/* <Comanda orders={orders} setOrders={setOrders} /> */}
                 <Comanda />
               </ProtectedRoute>
             }

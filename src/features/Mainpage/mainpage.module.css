@@ -674,6 +674,51 @@ section h2 {
         justify-content: center;
     }
 }
+
+/* Attachment Display Styles */
+.attachmentsSection {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 140, 0, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid var(--orange, #ff8c00);
+    text-align: left;
+}
+
+.attachmentsSection h4 {
+    margin: 0 0 10px 0;
+    color: var(--orange, #ff8c00);
+    font-size: 1.1rem;
+}
+
+.attachmentsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.attachmentItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.attachmentItem:last-child {
+    border-bottom: none;
+}
+
+.attachIconSmall {
+    width: 20px;
+    height: 20px;
+}
+
+.attachmentItem span {
+    color: #333;
+    font-size: 1rem;
+}
+
 /* ========================================
    End of File
    ======================================== */
